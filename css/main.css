@@ -1,0 +1,339 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1em;
+    position: relative;
+    overflow: hidden;
+    font-family: sans-serif, serif;
+    background-color: #000;
+}
+
+/*viewport >= 768*/
+
+
+
+/*viewport >= 1024px*/
+
+
+    /*Format for top header*/
+    #header_wrapper {
+        position: relative;
+        margin: 30px auto;
+        width: 960px;
+        height: 300px;
+        margin-top: 20px;
+        font-size: 0.9em;
+    }
+
+    #main_nav {
+        position: absolute;
+        width: 100%;
+    }
+
+    #main_nav ul {
+        display: block;
+        list-style: inside none;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 200px;
+    }
+
+    #main_nav > ul > li {
+        display: inline-block;
+    }
+
+    #main_nav > ul > li > a {
+        border-top: 1px solid #ccc;
+    }
+
+    #main_nav ul a {
+        display: block;
+    }
+
+    #symbol {
+        top: 0;
+        background-image: url('img/ha-sprites.png');
+        background-position: 0 0;
+        width: 60px;
+        height: 60px;
+        background-size: 183px 60px;
+    }
+
+    #logo {
+        top: 200px;
+        background-image: url('img/ha-sprites.png');
+        background-position: -60px 0;
+        width: 123px;
+        height: 15px;
+        background-size: 183px 60px;
+    }
+
+
+
+
+/*For all devices*/
+
+#background_slide {
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: -999;
+    height: 100%;
+    width: 100%;
+}
+
+#background_slide img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation-name: change;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+#pic_a {
+    animation-delay: 6s;
+}
+
+#pic_b {
+    animation-delay: 3s;
+}
+
+#pic_c {
+    animation-delay: 0;
+}
+
+#pic_d {
+    animation-delay: 9s;
+}
+
+#pic_e {
+    animation-delay: 12s;
+}
+
+@keyframes change {
+    0% {
+        opacity: 0;
+    }
+    6.66% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    26.66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header,
+section,
+aside,
+nav {
+    display: block;
+}
+
+#logo,
+#symbol {
+    position: absolute;
+    left: 0;
+    text-indent: -2000px;
+}
+
+.dropdown-menu {
+    margin-left: 0;
+    margin-right: 5px;
+    width: 150px;
+    position: relative;
+}
+
+#contact {
+    width: 100px;
+}
+
+.dropdown-menu:hover > a {
+    color: #38ff00;
+}
+
+#main_nav .dropdown-content {
+    display: none;
+    padding-right: 0;
+    position: absolute;
+    z-index: 1000;
+    top: 100%;
+    width: 100%;
+    margin-left: 0;
+}
+
+.dropdown-content li {
+    display: block;
+    text-align: left;
+    border-top: 1px solid #ccc;
+}
+
+#main_nav .dropdown-menu:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    color: #38ff00;
+}
+
+
+
+/*Format for body*/
+
+#body_wrapper {
+    position: relative;
+    margin: 30px auto;
+    width: 960px;
+    color: #aeaeae;
+    bottom: 0;
+    height: 250px;
+    font-size: 0.8em;
+}
+
+#body_wrapper a {
+    color: #aeaeae;
+}
+
+#body_wrapper ul > li:hover > a {
+    color: #fff;
+}
+
+#left_col {
+    float: left;
+    display: inline-block;
+}
+
+#riba {
+    display: block;
+    margin-top: 15px;
+    opacity: .6;
+    background-image: url('img/ha-sprites.png');
+    background-position: -60px -15px;
+    width: 82px;
+    height: 18px;
+    background-size: 183px 60px;
+}
+
+#riba:hover {
+    opacity: 1;
+}
+
+#left_col ul {
+    padding-top: 20px;
+    list-style: inside none;
+}
+
+#left_col ul > li {
+    display: block;
+    width: 150px;
+    border-top: 1px solid #ccc;
+}
+
+#social {
+    padding-top: 10px;
+}
+
+#social > a > div {
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: black;
+    border-radius: 100%;
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+
+#social > a > div:hover {
+    background-color: #38ff00;
+}
+
+#footer {
+    padding-top: 10px;
+}
+
+#mid_col {
+    float: left;
+    display: inline-block;
+    padding-left: 150px;
+    width: 45%;
+}
+
+#blog_list {
+    padding-top: 0;
+}
+
+h2 {
+    font-size: 1em;
+    border-top: 1px solid #ccc;
+    width: 100%;
+}
+
+h2 > a {
+    color: white !important;
+}
+
+h2 > a:hover {
+    color: #aeaeae !important;
+}
+
+#right_col ul li:first-child:before,
+#mid_col ul li:first-child:before {
+    content: '';
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-image: url('img/113-emoji_twitter_%EF%BC%8B.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -10px;
+    margin-bottom: -15px;
+}
+
+#right_col ul,
+#mid_col ul {
+    list-style: inside none;
+    width: 100%;
+}
+
+#blog_list p {
+    margin-bottom: 20px;
+}
+
+#right_col {
+    float: right;
+    display: inline-block;
+    padding-right: 20px;
+    width: 35%;
+}
+
+#background_footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -999;
+    width: 100%;
+    height: 270px;
+    background: url('img/faux-footer-bg.png');
+}
